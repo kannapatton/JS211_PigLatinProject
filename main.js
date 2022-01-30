@@ -1,14 +1,15 @@
 'use strict';
 
 // brings in the assert module for unit testing
-const assert = require('assert');
+//const assert = require('assert');
 // brings in the readline module to access the command line
-const readline = require('readline');
+//const readline = require('readline');
 // use the readline module to print out to the command line
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+//const rl = readline.createInterface({
+//input: process.stdin,
+//output: process.stdout
+//});
+
 
 
 const pigLatin = (word) => {
@@ -32,17 +33,51 @@ const pigLatin = (word) => {
     }
   }
 }
+//variable to store input
+let input = '';
+
+//variables that reference elements in the DOM
+const  textInput = document.getElementById('textInput')
+const button = document.getElementById('button')
+const reset = document.getElementById('reset')
+const textOutput = document.getElementById('textOutput')
+const pigButton = document.getElementById('pigButton')
+console.log()
+
+//console.log(textInput) and event handlers
+textInput.addEventListener('keyup', (event) => {
+  input= event.target.value
+  console.log(input)
+})
+button.addEventListener('click', (event) =>{
+  let words = input.split(' ')
+  let pigWord= words.map(word => pigLatin(word)).join(' ')
+  textOutput.innerText = pigWord
+} )
+reset.addEventListener('click', (event) =>{
+  textInput.value = '';
+  textOutput.innerText='';
+  input='';
+  console.log('click')
+} )
+
+//unecessary extras
+//pigButton.addEventListener('mousedown', (event) => {
+  //pigButton.classList.remove('pigButton')
+//})
+
+
 
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
 // to close it ctrl + C
-const getPrompt = () => {
-  rl.question('word ', (answer) => {
-    console.log(pigLatin(answer));
-    getPrompt();
-  });
-}
+//const getPrompt = () => {
+//   rl.question('word ', (answer) => {
+//     console.log(pigLatin(answer));
+//     getPrompt();
+//   });
+// }
 
 // Unit Tests
 // to use them run the command: npm test main.js
@@ -69,7 +104,7 @@ if (typeof describe === 'function') {
   });
 } else {
 
-  getPrompt();
+  // getPrompt();
 
 }
 

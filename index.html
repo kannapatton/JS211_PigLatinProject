@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="main.js"></script>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <hr/>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pig Latin Translator</title>
+  <link rel="stylesheet" href="./index.css">
+  
+</head>
+
+<body>
+  <div class='whole-container'>
+    <header class='header'>
+      <img src="pig2.jpg" alt="two pig buddies" class="header-icon" />
+      <h1 class='header-title'>Oinkify your words!</h1>
+    </header>
+    <!-- //text area -->
+    <textArea class="text-input" id="textInput"></textArea>
+    <br>
+    <div class="button-container"></div>
+    <img src="pig.jpg" alt="close-up of pink pig" class="pig-button" id="pigButton">
+    <br>
+    <!-- //buttons here -->
+    <div>
+      <button class="button" id="button">Oinkify!</button>
+      <button class="button" id="reset">Rest</button>
+    </div>
+    <!-- Text outPut -->
+    <p class="text-output" id="textOutput"></p>
+    <br>
+  </div>
+  <script src="main.js"></script>
+</body>
+
 </html>

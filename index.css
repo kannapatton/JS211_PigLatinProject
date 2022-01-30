@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: rgb(209, 39, 39);
+    align-items: center;
+}
+header{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}    
+
+#pigButton{
+height: 250px;
+border-radius: 25%;
+}
+.text-input{
+width: 300px;
+text-align: center;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:large;
+}
+.whole-container {
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+}
+.header-icon{
+    padding-top: 10px;
+    height: 225px;
+    border-radius: 25%;
+}
+#textOutput{
+    height:35px;
+    width: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:large;
+    text-align: center;
+    background-color:seashell;
+}
